@@ -1,0 +1,46 @@
+@import "../../../styles/index";
+
+.ModeItem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4px 12px;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &Icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    stroke: $color-text-primary;
+  }
+  span {
+    margin: 4px;
+    color: $color-text-primary;
+    @include inter-14-medium;
+  }
+
+  &_active {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid $color-mode-item-border;
+    svg {
+      stroke: $color-button;
+    }
+  }
+  &:hover {
+    svg {
+      stroke: $color-button;
+    }
+  }
+  &-Icon {
+    width: 20px;
+    height: 20px;
+  }
+}

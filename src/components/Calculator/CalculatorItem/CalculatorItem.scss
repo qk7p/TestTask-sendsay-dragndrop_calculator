@@ -1,0 +1,11 @@
+@import "../../../styles/index";
+
+.CalculatorItem {
+  &_moved {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &_child_locked * {
+    pointer-events: none;
+  }
+}

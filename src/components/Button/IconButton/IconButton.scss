@@ -1,0 +1,30 @@
+@import "../../../styles/index";
+
+.IconButton.Button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  transition: all 0.15s;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  & svg {
+    transition: all 0.15s;
+  }
+
+  &.Button__disabled {
+    background-color: transparent;
+
+    svg {
+      stroke: black;
+    }
+
+    &:hover {
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}

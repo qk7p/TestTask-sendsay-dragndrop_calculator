@@ -1,0 +1,33 @@
+@import "../../styles/index";
+
+.Button {
+  $this: &;
+  padding: 10px 30px;
+  height: max-content;
+  width: max-content;
+  color: white;
+  background-color: $color-button;
+  border: 1px solid $color-button;
+  border-radius: 5px;
+  outline: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+  @include inter-14-regular;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &#{$this}__disabled {
+    color: $color-disabled;
+    background-color: $color-disabled;
+    border-color: $color-disabled;
+    cursor: default;
+
+    &:hover {
+      color: $color-disabled;
+      background-color: $color-disabled;
+      border-color: $color-disabled;
+    }
+  }
+}

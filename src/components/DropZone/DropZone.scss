@@ -1,0 +1,42 @@
+@import "../../styles/index";
+
+.DropZone {
+  width: 243px;
+  height: 448px;
+  border: 2px dashed $color-dropzone-border;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-Icon {
+    pointer-events: none;
+    svg {
+      stroke: black;
+    }
+  }
+
+  &-MainText {
+    pointer-events: none;
+    @include inter-14-medium;
+    color: $color-dropzone-main-text;
+    line-height: 17px;
+    margin-top: 12px;
+  }
+
+  &-SubText {
+    pointer-events: none;
+    @include inter-12-regular;
+    color: $color-dropzone-sub-text;
+    margin-top: 4px;
+  }
+
+  &_entered {
+    border: none;
+  }
+
+  &_dragenter {
+    background-color: $color-dropzone-hover;
+  }
+}

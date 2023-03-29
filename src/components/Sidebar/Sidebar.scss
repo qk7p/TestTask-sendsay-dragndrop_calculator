@@ -1,0 +1,53 @@
+@import "../../styles/index";
+
+.Sidebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  height: 100%;
+
+  &Container {
+    flex: 1;
+
+    &-enter {
+      opacity: 0;
+      width: 1px;
+    }
+
+    &-enter-active {
+      opacity: 1;
+      width: 243px;
+      transition: opacity 300ms, width 300ms;
+    }
+
+    &-exit {
+      opacity: 1;
+      width: 243px;
+    }
+
+    &-exit-active {
+      opacity: 0;
+      width: 1px;
+      transition: opacity 300ms, width 300ms;
+    }
+
+    &-enter-done {
+      width: 100%;
+    }
+  }
+
+  &-IconButton {
+    cursor: pointer;
+    height: 100%;
+
+    svg {
+      stroke: $color-text-primary;
+    }
+
+    &_active {
+      transform: rotate(180deg);
+      margin-right: 8px;
+    }
+  }
+}
